@@ -1,5 +1,7 @@
-class HelloWorld {
-    def run(): Unit = {
-        println("Oh hai there!")
-    }
+trait Output {
+  def print(s: String) = Console.println(s)
+}
+
+class HelloWorld extends Output {
+  def run() = print("Oh hai there!")
 }
